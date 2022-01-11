@@ -1,15 +1,73 @@
-*,
-*::after,
-*::before {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #000;
+  margin: 200px auto 0px;
+  width: 280px;
+  height: 84px;
+  position: relative;
+}     
+ .signal {
+    border-right: 12px solid #f3f0ee;
+    border-bottom: 12px solid #f3f0ee;
+    transform: rotate(-135deg);
+    position: absolute;
+}
+  
+ .signal:first-child {
+	left: 50%;
+	top: -160px;
+	margin-left: -56px;  
+	width: 100px;
+	height: 100px;
+	border-radius: 0 0 100px 0;
+  transition: ease-in;
+  opacity: 40%;
+  animation: blink 2s infinite;
+	animation-delay: 2s;
 }
 
-body {
-  background-color: #fff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+ .signal:nth-child(2) {
+	left: 50%;
+	top: -130px;
+	margin-left: -43px;  
+	width: 74px;
+	height: 74px;
+  opacity: 40%;
+	border-radius: 0 0 74px 0;
+	animation: blink 2s infinite;
+	animation-delay: 1s;
+	}   
+  
+  .signal:last-child {
+	left: 50%;
+	top: -100px;
+	margin-left: -30px;  
+	width: 48px;
+	height: 48px;
+  opacity: 90%;
+	border-radius: 0 0 48px 0;
+	animation: infinite;
+  animation: 2s infinite;
+	animation-delay: 3s;
 }
 
+ .signal:last-child:after {
+	content: '';
+	position: absolute;
+	right: 35%;
+	bottom: 35%;
+	height: 20px;
+	width: 20px;
+	background-color: #f1ecec;
+	border-radius: 0px 0px 100px 0px;
+	margin-left: -25px;
+	animation: infinite;
+}
+
+
+@keyframes blink {
+	0% {opacity: 0}
+	49%{opacity: 0}
+  50%{opacity: 1}
+}
