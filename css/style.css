@@ -7,6 +7,20 @@ body {
   height: 84px;
   position: relative;
 }     
+.tugma{
+  position: absolute;
+  left: 15%;
+  top: 150%;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 10px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.tugma:hover{
+  outline: 2px solid rgb(243, 4, 4);
+}
  .signal {
     border-right: 12px solid #f3f0ee;
     border-bottom: 12px solid #f3f0ee;
